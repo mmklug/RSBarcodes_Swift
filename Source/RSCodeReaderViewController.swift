@@ -208,6 +208,7 @@ open class RSCodeReaderViewController: UIViewController, AVCaptureMetadataOutput
       }
    }
 	
+   @available(iOSApplicationExtension, unavailable)	
    @objc func reloadVideoOrientation() {
       guard let videoPreviewLayer = self.videoPreviewLayer else {
          return
