@@ -119,6 +119,7 @@ open class RSCodeReaderViewController: UIViewController, AVCaptureMetadataOutput
       return nil
    }
 	
+   @available(iOSApplicationExtension, unavailable)
    @objc func setupCamera() {
       var error: NSError?
       let input: AVCaptureDeviceInput!
@@ -335,6 +336,7 @@ open class RSCodeReaderViewController: UIViewController, AVCaptureMetadataOutput
       self.cornersLayer.frame = frame
    }
 	
+   @available(iOSApplicationExtension, unavailable)		
    override open func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
       super.viewWillTransition(to: size, with: coordinator)
       coordinator.animate(alongsideTransition: nil, completion: { [weak self] _ in
