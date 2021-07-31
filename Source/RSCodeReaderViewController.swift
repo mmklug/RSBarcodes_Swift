@@ -52,7 +52,8 @@ open class RSCodeReaderViewController: UIViewController, AVCaptureMetadataOutput
       }
       return false
    }
-	
+
+   @available(iOSApplicationExtension, unavailable)	
    @objc open func switchCamera() -> AVCaptureDevice.Position {
       if !Platform.isSimulator {
          self.session.stopRunning()
@@ -121,9 +122,9 @@ open class RSCodeReaderViewController: UIViewController, AVCaptureMetadataOutput
       return nil
    }
 
-   @available(iOSApplicationExtension, available) 
-   @objc func setupCamera() {
-   }
+   //@available(iOSApplicationExtension, available) 
+   //@objc func setupCamera() {
+   //}
 	
    @available(iOSApplicationExtension, unavailable)
    @objc func setupCamera() {
@@ -352,6 +353,7 @@ open class RSCodeReaderViewController: UIViewController, AVCaptureMetadataOutput
       })
    }
 	
+   @available(iOSApplicationExtension, unavailable)	
    override open func viewDidLoad() {
       super.viewDidLoad()
 		
