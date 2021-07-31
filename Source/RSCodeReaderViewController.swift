@@ -60,9 +60,9 @@ open class RSCodeReaderViewController: UIViewController, AVCaptureMetadataOutput
          if let device = captureDevice {
             self.device = device
          }
-	 if #available(iOSApplicationExtension, unavailable) {     
+	 //if #available(iOSApplicationExtension, unavailable) {     
              self.setupCamera()
-	 }
+	 //}
          self.view.setNeedsLayout()
          self.session.startRunning()
          if let device = self.device {
@@ -119,6 +119,10 @@ open class RSCodeReaderViewController: UIViewController, AVCaptureMetadataOutput
          }
       }
       return nil
+   }
+
+   @available(iOSApplicationExtension, available) 
+   @objc func setupCamera() {
    }
 	
    @available(iOSApplicationExtension, unavailable)
@@ -353,9 +357,9 @@ open class RSCodeReaderViewController: UIViewController, AVCaptureMetadataOutput
 		
       self.view.backgroundColor = UIColor.clear
 	
-      if #available(iOSApplicationExtension, unavailable) {	   
+      //if #available(iOSApplicationExtension, unavailable) {	   
           self.setupCamera()
-      }
+      //}
 		
       let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(RSCodeReaderViewController.onTap(_:)))
       self.view.addGestureRecognizer(tapGestureRecognizer)
